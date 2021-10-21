@@ -22,13 +22,4 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'python abhinav.py'
-
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
-
-- script: |
-    pip install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+  displayName: 'InSem Lab Exam Q2 Task'

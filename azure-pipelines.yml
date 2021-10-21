@@ -1,7 +1,4 @@
 # Python package
-- task: CmdLine@2
-  inputs:
-    script: 'python abhinav.py'
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -31,7 +28,9 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
+- task: CmdLine@2
+  inputs:
+    script: 'python abhinav.py'
 - script: |
     pip install pytest pytest-azurepipelines
     pytest
